@@ -2,20 +2,15 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-const dotenv = require('dotenv');
 const knexSnakeCaseMappers = require('objection');
 
-dotenv.config();
-
 module.exports = {
-
-
   development: {
     client: 'pg',
-    connection: process.env.DATABASE_URL || {
+    connection: {
       database: 'objection_tutorial',
-      user: process.env.DB_USERNAME,
-      password: process.env.DB_PASSWORD,
+      user: 'postgres',
+      password: 'postgres',
     },
     pool: {
       min: 2,
