@@ -1,2 +1,2 @@
 # objectionWithKnex
-Knex and objection is an orm type for nodejs
+Objection with Knex is an ORM type for nodejs
